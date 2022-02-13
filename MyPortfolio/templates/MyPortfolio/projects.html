@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<html>
+<head>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+{% block content %}
+
+
+
+{% for pd in proj_data%}
+          <div class="d-flex justify-content-center mt-3">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+              <a href="{{pd.link}}"> <img src="{{pd.img.url}}"  class="img-fluid rounded-start" alt="..."> </a>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{pd.title}}</h5>
+                  <p class="card-text">{{pd.desc}}</p>
+                  <p class="card-text"><small class="text-muted">{{pd.tags}}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+</body>
+
+
+</html>

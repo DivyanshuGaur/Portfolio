@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<html>
+<head>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+{% block content %}
+
+
+
+
+
+{% for a in ac%}
+
+ <div class="d-flex justify-content-center mt-3">
+
+ <div class="alert alert-primary" role="alert">
+  
+    {{a.ac}}
+    {% if a.lt is not null%}
+    <a href="{{a.link}}">{{a.lt}}</a>
+    {% endif %}
+</div>
+</div>
+
+{% endfor %} 
+
+{% endblock %}
+
+</body>
+
+
+</html>
